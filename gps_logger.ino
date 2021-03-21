@@ -19,7 +19,9 @@ void loop() {
     if (gps.location.isUpdated()) {
       Serial.print(gps.location.lat(), 6);
       Serial.print(", ");
-      Serial.println(gps.location.lng(), 6);
+      Serial.print(gps.location.lng(), 6);
+      Serial.print(", ALT=");
+      Serial.println(gps.altitude.meters());
     }
   }
 }
